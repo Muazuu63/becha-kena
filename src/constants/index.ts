@@ -1,0 +1,90 @@
+// ==============================================================================
+// বেচা-কেনা (Becha-Kena) — System Constants & Enums
+// ==============================================================================
+
+export enum UserRole {
+  GUEST = 'GUEST',
+  UNVERIFIED_USER = 'UNVERIFIED_USER',
+  PARENT_VERIFIED_MINOR = 'PARENT_VERIFIED_MINOR',
+  VERIFIED_USER = 'VERIFIED_USER',
+  MODERATOR = 'MODERATOR',
+  SUPER_ADMIN = 'SUPER_ADMIN',
+}
+
+export enum NidStatus {
+  UNVERIFIED = 'UNVERIFIED',
+  PENDING_REVIEW = 'PENDING_REVIEW',
+  APPROVED = 'APPROVED',
+  REJECTED = 'REJECTED',
+}
+
+export enum ListingStatus {
+  DRAFT = 'DRAFT',
+  PENDING_REVIEW = 'PENDING_REVIEW',
+  ACTIVE = 'ACTIVE',
+  RESERVED = 'RESERVED',
+  SOLD = 'SOLD',
+  EXPIRED = 'EXPIRED',
+  REJECTED = 'REJECTED',
+  BANNED_SUSPENDED = 'BANNED_SUSPENDED',
+}
+
+export enum ProductCondition {
+  LIKE_NEW = 'LIKE_NEW',
+  GENTLY_USED = 'GENTLY_USED',
+  FAIR = 'FAIR',
+  FOR_PARTS = 'FOR_PARTS',
+}
+
+export enum DisputeStatus {
+  OPEN = 'OPEN',
+  UNDER_INVESTIGATION = 'UNDER_INVESTIGATION',
+  RESOLVED_BUYER_WIN = 'RESOLVED_BUYER_WIN',
+  RESOLVED_SELLER_WIN = 'RESOLVED_SELLER_WIN',
+  DISMISSED = 'DISMISSED',
+}
+
+export enum DisputeReason {
+  CLONE_DEVICE = 'CLONE_DEVICE',
+  ICLOUD_LOCKED = 'ICLOUD_LOCKED',
+  HARDWARE_FAULT = 'HARDWARE_FAULT',
+  STOLEN_SUSPECT = 'STOLEN_SUSPECT',
+  MISLEADING_INFO = 'MISLEADING_INFO',
+}
+
+export enum PaymentType {
+  FEATURED_AD_3D = 'FEATURED_AD_3D',
+  FEATURED_AD_7D = 'FEATURED_AD_7D',
+  URGENT_TAG = 'URGENT_TAG',
+  EXPRESS_VERIFY = 'EXPRESS_VERIFY',
+}
+
+export enum PaymentGateway {
+  BKASH = 'BKASH',
+  NAGAD = 'NAGAD',
+}
+
+export enum PaymentStatus {
+  PENDING = 'PENDING',
+  SUCCESS = 'SUCCESS',
+  FAILED = 'FAILED',
+  CANCELLED = 'CANCELLED',
+}
+
+export const HTTP_STATUS = {
+  OK: 200,
+  CREATED: 201,
+  ACCEPTED: 202,
+  NO_CONTENT: 204,
+  BAD_REQUEST: 400,
+  UNAUTHORIZED: 401,
+  FORBIDDEN: 403,
+  NOT_FOUND: 404,
+  CONFLICT: 409,
+  GONE: 410,
+  LOCKED: 423,
+  UPGRADE_REQUIRED: 426,
+  TOO_MANY_REQUESTS: 429,
+  INTERNAL_SERVER_ERROR: 500,
+  SERVICE_UNAVAILABLE: 503,
+} as const;

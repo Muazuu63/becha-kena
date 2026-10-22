@@ -1,0 +1,60 @@
+{
+  "name": "becha-kena-backend",
+  "version": "1.0.0",
+  "description": "Verified C2C Recommerce Marketplace Backend for Bangladesh",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc && tsc-alias",
+    "start": "node dist/server.js",
+    "seed": "tsx src/scripts/seed.ts",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "lint": "eslint \"src/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "keywords": [
+    "recommerce",
+    "marketplace",
+    "bangladesh",
+    "express",
+    "typescript",
+    "mongodb",
+    "redis"
+  ],
+  "author": "Becha-Kena Engineering Team",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "compression": "^1.8.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.3",
+    "pino": "^10.4.0",
+    "pino-pretty": "^13.2.0",
+    "uuid": "^14.0.3",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/compression": "^1.8.1",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^26.6.5",
+    "@types/uuid": "^10.0.0",
+    "eslint": "^10.13.0",
+    "prettier": "^3.9.10",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.9.8",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

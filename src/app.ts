@@ -9,6 +9,8 @@ import { notFoundHandler, globalErrorHandler } from '@/middlewares/error.middlew
 import { ApiResponse } from '@/utils/api-response';
 import { checkDatabaseHealth } from '@/config/database';
 import authRoutes from '@/modules/auth/auth.routes';
+import userRoutes from '@/modules/users/user.routes';
+import kycRoutes from '@/modules/kyc/kyc.routes';
 
 const app: Application = express();
 
@@ -59,6 +61,8 @@ app.get(`${env.API_PREFIX}/health`, async (_req: Request, res: Response) => {
 
 // API Modules Routing
 app.use(`${env.API_PREFIX}/auth`, authRoutes);
+app.use(`${env.API_PREFIX}/users`, userRoutes);
+app.use(`${env.API_PREFIX}/kyc`, kycRoutes);
 
 // Centralized Error Handling Middlewares (Must be last in chain)
 app.use(notFoundHandler);
